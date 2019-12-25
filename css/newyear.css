@@ -4,51 +4,53 @@
     font-family:sans-serif;
 }
 body{
-    background: url("../image/red-fireworks-display-799964.jpg");
-    background-attachment: fixed;
     background-blend-mode: hard-light;
-    background-size: cover;
+    text-align: center;
 }
+.container-fluid{
+    padding:0;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}    
 .name{
     background: -webkit-linear-gradient(rgb(197, 101, 101), rgb(248, 137, 47));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family:'Akronim' ;
+    text-align:center;
+    position: relative;
+    /* z-index: 100; */
 }
 .box{
-    position:absolute;
+    position: absolute;
     top:80px;
-    left:100px;
-    right:100px;
+    right:0px;
+    left:0px;
     bottom:80px;
     background: url("../image/red-fireworks-display-799964.jpg");
     background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5),
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.24),
     0 0 0 100px rgba(0, 0, 0, 0.3);
 }
 .box h2{
-    text-align: center;
-    background: -webkit-linear-gradient(rgb(197, 101, 101), rgb(248, 137, 47));
+    background: -webkit-linear-gradient(rgb(197, 101, 101), rgb(236, 77, 3));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size:90px;
-    font-weight:500;
     font-family: 'Akronim';
     letter-spacing: 7px;
 }
 .box h2 span{
     display:block;
-    font-weight: 200;
     letter-spacing: 6px;
     font-family: 'Akronim';
 }
-.countdown{
-    display:flex;
-    margin-top: 42px;
-}
+
 .countdown div{
     position:relative;
     width:70px;
@@ -58,7 +60,6 @@ body{
     font-size: 2.2em;
     font-weight:500;
     color: maroon;
-    background:#000;
     margin:5px;
     background: -webkit-linear-gradient(rgba(231, 61, 61, 0.89), rgba(248, 138, 47, 0.822));
    
@@ -90,4 +91,13 @@ body{
 .countdown #secound:before{
     content:'Sec';
     font-size:20px;
+}
+@media only screen and (min-width: 768px){
+    .box{
+        position: absolute;
+        top:80px;
+        right:100px;
+        left:210px;
+        bottom:80px;
+    }
 }
